@@ -113,7 +113,18 @@ fun main () {
     Now, set userName to null and observe the different output.
 */
 
-    val userName: String?  = "DIOLI"
-    //if userName
- 
+    val userName: String?  = "Alicia"
+    if (userName != null) {
+        println("Hola, $userName")
+    } else {
+        println("Hola invitado")
+    }
+
+    ////nullable
+    val usuario: String?  = null
+    if (usuario != null) {
+        println("Hola, $usuario")
+    } else {
+        println("Hola invitado")
+    }
 }
