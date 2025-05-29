@@ -113,7 +113,7 @@ fun main () {
     Now, set userName to null and observe the different output.
 */
 
-    val userName: String?  = "Alice"
+    val userName: String?  = "DIOLI"
     //if userName
  
 }
