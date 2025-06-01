@@ -1,8 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 fun main() {
   // Practice Basic Operations in Kotlin = TASKS
-// 01. Ejercicio
+
+    // --LECCION 2
+
+    // 01. Ejercicio
     val fish = 2
     var firstoffspring = 71
     var secondoffspring =  233
@@ -50,7 +52,6 @@ rainbowColor = "Marron"
 
     "Hello" + "Fish"
 
-
     //  OTHER TASKS STRINGS
     val trout = "trout"
     val haddock  = "haddock"
@@ -85,6 +86,8 @@ rainbowColor = "Marron"
         listaString.add(number.toString())
         println(listaString)
     }
+
+    //----LECCION 3
 
 
 }
