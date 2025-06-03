@@ -1,3 +1,5 @@
+import java.util.Calendar
+
 fun main() {
 
 // Practice Basic Operations in Kotlin = TASKS
@@ -89,7 +91,54 @@ fun main() {
 
     //----LECCION 3
 
+            dayOfWeek()
+    }
+    fun dayOfWeek() {
+        println("What day is it today?")
 
+        val day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
+        val dayName = when (day) {
+            1 -> ("Today is Sunday")
+            2 -> "Today is Monday"
+            3 -> "Today is Tuesday"
+            4 -> "Today is Wednesday"
+            5 -> "Today is Thursday"
+            6 -> "Today is Friday"
+            7 -> "Today is Saturday"
+            else -> "Armagedon arrived :b "
+        }
+        println(dayName)
 
+        //// Second Exercise = Greetings,Kotlin
 
-}
+        fun time24Hours(args: Array<String>) {
+            val horas = args [0].toInt()
+            if(horas < 12) {
+                println("Good Morning, Kotlin")
+            }else {
+                println("Good Night, Kotlin")
+            }
+        }
+        /// TASK --- RAMDOM
+
+        val fortune = getFortuneCookie()
+        println("Your Fortune is: $fortune")
+    }
+    fun getFortuneCookie(): String? {           ///Devuelve un String (la frase de la fortuna).
+        val fortunes = listOf(
+            "You will have a great day!",
+            "Things will go well for you today.",
+            "Enjoy a wonderful day of success.",
+            "Be humble and all will turn out well.",
+            "Today is a good day for exercising restraint.",
+            "Take it easy and enjoy life!",
+            "Treasure your friends because they are your greatest fortune."
+        )
+        print("Enter your birthday: ")                          ///readLine()	Lee lo que el usuario escribió como texto.
+        val birthday = readLine()?.toIntOrNull()?: 5            /// ?.toIntOrNull()	Intenta convertirlo a número. Si no puede, devuelve null.
+        val index = birthday % fortunes.size                    ///  y si es null entonces usara el valor 5 por defecto.
+
+        return fortunes[index]
+    }
+/// getfortune function - part 2
+
