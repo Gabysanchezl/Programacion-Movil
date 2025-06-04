@@ -86,6 +86,8 @@ fun dayOfWeek() {
     val temperature = readLine()!!.toInt()?: 24
     println(whatShouldIDoToday(mood, weather, temperature))
 
+    //Loops
+
 
 
 }
