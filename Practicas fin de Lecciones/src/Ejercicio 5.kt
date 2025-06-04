@@ -23,6 +23,12 @@ fun main() {
 
     //Lambdas
 
+    fun actualizarSuciedad(nivel: Int, operacion: (Int) -> Int): Int {                      // función de orden superior ---- es una función que recibe otra función como parámetro
+        return operacion(nivel)                                                             //operacion es una función que recibe un Int y devuelve un Int.
+    }
+    val resultado = actualizarSuciedad(30) { sucio -> sucio / 2 }
+    println(resultado)
+
 
 
 
@@ -31,7 +37,3 @@ fun main() {
 
 
 }
-
-
-
-

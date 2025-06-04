@@ -1,7 +1,7 @@
 fun main () {
-/// GET FORTUNE COOKIE   -   Random
-/*
 
+    /*
+/// GET FORTUNE COOKIE   -   Random
 fun getFortuneCookie(): String? {           ///Devuelve un String (la frase de la fortuna).
     val fortunes = listOf(
         "You will have a great day!",
@@ -17,7 +17,7 @@ fun getFortuneCookie(): String? {           ///Devuelve un String (la frase de l
         ?: 5                                                              /// ?.toIntOrNull()	Intenta convertirlo a número. Si no puede, devuelve null.
     val index = birthday % fortunes.size                                ///  y si es null entonces usara el valor 5 por defecto.
                                                                             /// % es el operador módulo, que da el resto de una división. Garantiza que el número nunca se pase de la cantidad de frases.
-                                                                              //Ejemplo:   Si cumpleaños = 10 y hay 7 frases → 10 % 7 = 3 → muestra la frase #3.
+                                                                              //Ejemplo:   Si birthday = 10 y hay 7 frases → 10 % 7 = 3 → muestra la frase #3.
     return fortunes[index]
 }
 val fortune = getFortuneCookie()
