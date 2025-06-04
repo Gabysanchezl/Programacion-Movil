@@ -1,4 +1,7 @@
-fun main() {
+import java.util.Calendar
+import kotlin.random.Random
+
+/*fun main() {
 
     //DEFINICIONES
 
@@ -51,11 +54,77 @@ fun main() {
     println(list2[1])                   // null
 
 
+}
+*/
 
-
+/*
     ////PARTE 3
+    fun main () {
+        dayOfWeek()
+    }
+    fun dayOfWeek() {
+        println("What day is it today?")
+
+        val day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
+        val dayName = when (day) {
+            1 -> ("Sunday")
+            2 -> "Monday"
+            3 -> "Tuesday"
+            4 -> "Wednesday"
+            5 -> "Thursday"
+            6 -> "Friday"
+            7 -> "Saturday"
+            else -> "Time has stopped"
+        }
+        println(dayName)
+    }
+*/
+
+fun main(args: Array<String>) {                     //Significa que tu programa puede recibir argumentos desde la línea de comandos. Se guardan en el arreglo args.
+
+    val temperatura = 25
+    val mensaje = if (temperatura > 50) "El pez está frito" else "El pez está a salvo"
+    println(mensaje)
+
+    //RAMDOM FNCTIONS
+}
 
 
+       fun feedTheFish() {
+           val day = randomDay()
+           val food = fishFood (day)
+        println("Today is $day and the fish eat $food")
+    }
+    fun randomDay(): String {
+         val week = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+        return week[Random().nextInt(7)]
+    }
+// Fish Food
+    fun fishFood(day: String): String {
+    var food = "Ayuno"
+
+    when (day) {
+        "Monday" -> food = "flakes"
+        "Tuesday" -> food = "pellets"
+        "Wednesday" -> food = "redworms"
+        "Thursday" -> food = "granules"
+        "Friday" -> food = "mosquitoes"
+        "Saturday" -> food = "lettuce"
+        "Sunday" -> food = "plankton"
+    }
+    return food
+    }
+
+
+/// Anadir peces
+
+fun canAddFish(
+    tankSize: Double,                      // Tamaño de la pecera en galones
+    currentFish: List<Int>,               // Lista de peces actuales (su tamaño en pulgadas)
+    fishSize: Int = 2,                    // Tamaño del pez nuevo. Por defecto, 2 pulgadas. A menos que yo defina un valor distinto
+    hasDecorations: Boolean = true        // ¿Tiene decoraciones? Por defecto, sí.
+): Boolean {
+    ...
 
 
 }
