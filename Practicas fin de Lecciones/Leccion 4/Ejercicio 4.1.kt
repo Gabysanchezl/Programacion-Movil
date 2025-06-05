@@ -2,9 +2,7 @@ import Spices.SimpleSpice
 
 fun main (){
 
-
    //Spices Class
-
 
     val spices = listOf("curry", "pepper", "cayenne", "ginger", "red curry")
     val eager = spices.filter { it.length <= 6 }
@@ -19,6 +17,5 @@ fun main (){
     val especias2 = SimpleSpice()
     println("Spice name: ${especias2.name}")
     println("Heat Level: ${especias2.heat}")
-
 
 }
