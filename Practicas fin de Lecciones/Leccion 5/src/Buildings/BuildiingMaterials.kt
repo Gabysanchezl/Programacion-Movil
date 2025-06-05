@@ -1,0 +1,4 @@
+package Buildings
+
+class BuildiingMaterials {
+}
