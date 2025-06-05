@@ -5,22 +5,21 @@ open class MaterialesBase {
 }
 
 class Madera : MaterialesBase() {
-    override val numberNeeded = 4                       ///Cada material sobreescribe numberNeeded con su propio valor.
-}                                                       // Madera necesita 4 y Ladrillo 8
+    override val numberNeeded = 4
+}
+
 class Ladrillo : MaterialesBase() {
     override val numberNeeded = 8
 }
 
+class Building<out T : MaterialesBase>(private val material: T) {
 
-class Building<out T: MaterialesBase>(private val material: T) {
-
-    private val MaterialesBase = 100
+    private val baseMaterialsNeeded = 100
 
     val actualMaterialsNeeded: Int
-        get() = MaterialesBase * material.numberNeeded
+        get() = baseMaterialsNeeded * material.numberNeeded
 
     fun build() {
         println("${actualMaterialsNeeded} ${material::class.simpleName} required")
     }
 }
-
