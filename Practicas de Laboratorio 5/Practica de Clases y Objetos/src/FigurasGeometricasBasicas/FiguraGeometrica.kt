@@ -1,4 +1,0 @@
-package FigurasGeometricasBasicas
-
-class FiguraGeometrica {
-}
