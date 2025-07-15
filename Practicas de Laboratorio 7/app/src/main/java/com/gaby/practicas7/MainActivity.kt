@@ -1,7 +1,10 @@
 package com.gaby.practicas7
 
 import android.os.Bundle
-import android.widget.Space
+
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+
 import androidx.compose.ui.res.stringResource
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,12 +31,9 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.material3.DividerDefaults.color
-import androidx.compose.material3.Surface
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.res.stringResource
 
 
 class MainActivity : ComponentActivity() {
@@ -41,10 +41,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Column(
+            val scrollState = rememberScrollState()
+                Column(
+
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(10.dp)
+                    .verticalScroll(scrollState)
             ) {
                 MiPrimerComposable(
                     name = "Jetpack Compose",
@@ -88,6 +91,8 @@ class MainActivity : ComponentActivity() {
                }
 
                 TarjetaDeNoticia()
+
+                PantallaLogin()
 
         }
     }
@@ -324,5 +329,73 @@ fun TarjetaDeNoticia(){
 
 }
 
+@Composable
+fun PantallaLogin() {
+
+    Column(modifier = Modifier.fillMaxSize().padding(20.dp)
+        .border(width = 2.dp, color= Color(0xFF8AC6E1)
+    ), verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+
+
+    ){
+        Text(text = "Bienvenido!",
+            style = MaterialTheme.typography.headlineMedium,
+            color = Color.Black)
+
+        Spacer(modifier = Modifier.height(15.dp))
+
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .height(25.dp)
+            .padding(start = 10.dp,end = 10.dp)
+            .border(width = 1.dp, color= Color(0xFF8AC6E1))
+        ) {
+            Text(
+                text = "Usuario",
+                style = TextStyle(fontSize = 16.sp),
+                fontWeight = FontWeight.Normal,
+                modifier = Modifier.padding(start = 5.dp),
+                color = Color.DarkGray
+            )
+        }
+
+        Spacer(modifier = Modifier.height(15.dp))
+
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .height(25.dp)
+            .padding(start = 10.dp,end = 10.dp)
+            .border(width = 1.dp, color= Color(0xFF8AC6E1))
+        ) {
+            Text(
+                text = "Contrasena",
+                style = TextStyle(fontSize = 16.sp),
+                fontWeight = FontWeight.Normal,
+                modifier = Modifier.padding(start = 5.dp),
+                color = Color.DarkGray
+            )
+        }
+            Spacer(modifier = Modifier.height(30 .dp))
+
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .height(25.dp)
+            .padding(start = 10.dp,end = 10.dp)
+            .background(Color(0xFF009688))
+        ) {
+            Text(
+                text = "Login",
+                style = TextStyle(fontSize = 16.sp),
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(start = 5.dp),
+                color = Color.DarkGray
+            )
+        }
+        Spacer(modifier = Modifier.height(30 .dp))
+
+        }
+    }
 
 
