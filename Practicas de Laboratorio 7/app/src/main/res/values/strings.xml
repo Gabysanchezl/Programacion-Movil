@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Practicas7</string>
+
+    <string name="parrafo1">
+        Articulo sobre Jetpack Compose: Es un moderno toolkit para construir interfaces de usuario en Android...
+    </string>
+
+</resources>
